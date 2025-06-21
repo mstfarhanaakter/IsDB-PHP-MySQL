@@ -21,7 +21,7 @@
      function info1(){
         $b ="12"
         // echo $b;
-     }
+     };
      info1();
       ?>
 
@@ -30,7 +30,7 @@
         echo $_SERVER['SERVER_NAME'];
         echo "<br>";
         echo $_SERVER['SERVER_PORT'];
-        echo "<br>";
+        echo "<br>";    
         echo $_SERVER['SCRIPT_FILENAME'];
     ?>
 </body>
