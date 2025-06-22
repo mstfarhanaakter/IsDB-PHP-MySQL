@@ -17,6 +17,19 @@
         } else{
             echo "Both value are not equal";
         };
+
+        // 2nd example 
+        
+        $a = 100;  
+        $b = 50;
+
+        if ($a == 100 and $b == 50) { // we can use $$ sign or 'and' word
+            echo "<br>";
+            echo "Hello world!";
+        } else{
+            echo "<br>";
+            echo "Bye world!";
+        }
     ?>
 </body>
 </html>
