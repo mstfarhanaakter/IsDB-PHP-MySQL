@@ -43,7 +43,7 @@
     $c = new B("farhana", "Rajshahi", "farhana@gmail.com", "Dhaka");
     echo $c->fullInfo();
 
-        
+    
 
     ?>
 </body>
