@@ -25,6 +25,22 @@
 
     $var = new Fan("GFC", "Whie Off");
     echo $var->work();
+
+    echo "<br>";
+
+    class C extends Fan{
+        public $country;
+        function __construct($name, $color,$country){
+            parent::__construct($name,$color);
+            $this->country = $country;
+            // echo "My country name is ".$this->name. "".$this->color .  $this->country ;
+        }
+        function work(){
+            return "My country name is ".  $this->name. "".$this->color .  $this->country ;
+        }
+    }
+    $d = new C("GFC ", "Black ", " Bangladesh ");
+    echo $d->work();
     ?>
 </body>
 </html>
