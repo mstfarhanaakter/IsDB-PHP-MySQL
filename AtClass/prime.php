@@ -9,6 +9,7 @@
   <h1>Prime Number</h1>
   <form action="" method="post">
     Enter your number: <input type="text" name="number">
+    <button>Calculate</button>
   </form> 
 
 <?php 
