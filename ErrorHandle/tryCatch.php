@@ -1,9 +1,21 @@
 <?php 
+
+    $a = 10;
     try{
-        throw new Exception("Try catch error message");
+        if($a<30){
+            throw new Exception("Valid Number");
+        }
+        else{
+            throw new Exception("invalid Number");
+        }
+
     }
     catch(Exception $e){
-        echo $e->getMessage();
+        echo " Your error is: ". $e->getMessage() ."<br>";
+        // echo $e->getMessage();
+    }
+    finally{
+        echo "This is finally done my work ";
     }
 
 ?>
