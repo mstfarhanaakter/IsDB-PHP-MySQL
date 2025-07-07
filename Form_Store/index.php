@@ -20,6 +20,8 @@
     </form>
 
     <?php
+    require_once("form-class.php");
+    
     if (isset($_POST["submit"])) {
         $id = $_POST['i'];
         $name = $_POST['n'];
@@ -54,6 +56,11 @@
         } else {
             echo "<p style='color:red'>Your password is weak.Please use more then 6 words</p>";
         }
+
+        // data store in text file
+        $data = new Form($id, $name, $contact, $email, $password, $remarks);
+        $data -> data_save();
+        echo "Form Submit Successfully";
 
     }
     ?>
