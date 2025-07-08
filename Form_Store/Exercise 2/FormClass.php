@@ -22,6 +22,7 @@
         // display on browser
         public static function display(){
             $studnets = file(self::$file_name);
+            echo "<b></b>";
 
         }
     }

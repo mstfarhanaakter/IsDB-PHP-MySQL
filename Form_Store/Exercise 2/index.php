@@ -87,7 +87,7 @@
         </form>
         </div>
         <?php
-        require("FormClass.php");
+            require("FormClass.php");
 
         if (isset($_POST['submit'])) {
             $fn = $_POST['fn'];
