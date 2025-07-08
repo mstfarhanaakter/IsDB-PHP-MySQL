@@ -14,7 +14,7 @@
         Name: <input type="text" name="n"> <br><br>
         Contact: <input type="text" name="c"> <br><br>
         Email: <input type="text" required name="e"> <br><br>
-        Password: <input type="text" required name="p"> <br><br>
+        Password: <input type="password" required name="p"> <br><br>
         Remarks: <input type="text" name="r"> <br> <br>
         <input type="submit" name="submit">
     </form>
@@ -58,9 +58,12 @@
         }
 
         // data store in text file
+
         $data = new Form($id, $name, $contact, $email, $password, $remarks);
         $data -> data_save();
         echo "Form Submit Successfully";
+        echo"<br>";
+        echo $data->data_Show();
 
     }
     ?>
