@@ -29,28 +29,28 @@ class FormData
         }
     }
 
-    public static function display()
-    {
-        if (!file_exists(self::$file_name)) {
-            echo "<p style='text-align:center;'>No data found.</p>";
-            return;
-        }
-
-        $students = file(self::$file_name);
-        echo "<h2 style='text-align:center;'>User Data Table</h2>";
-        echo "<table border='1' style='margin:auto;text-align:center;'>";
-        echo "<tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Password Hash</th></tr>";
-
-        foreach ($students as $student) {
-            $data = explode("\t", trim($student));
-            echo "<tr>";
-            foreach ($data as $value) {
-                echo "<td>" . htmlspecialchars($value) . "</td>";
-            }
-            echo "</tr>";
-        }
-
-        echo "</table>";
+    public static function display() {
+    if (!file_exists(self::$file_name)) {
+        echo "<p style='text-align:center;'>No data found.</p>";
+        return;
     }
+
+    $students = file(self::$file_name);
+    echo "<h2 style='text-align:center;'>User Data Table</h2>";
+    echo "<table style='margin:auto;text-align:center;border-collapse:collapse;border:1px solid black;'>";
+    echo "<tr><th style='border:1px solid black;'>First Name</th><th style='border:1px solid black;'>Last Name</th><th style='border:1px solid black;'>Email</th><th style='border:1px solid black;'>Password Hash</th></tr>";
+
+    foreach ($students as $student) {
+        $data = explode("\t", trim($student));
+        echo "<tr>";
+        foreach ($data as $value) {
+            echo "<td style='border:1px solid black;'>" . htmlspecialchars($value) . "</td>";
+        }
+        echo "</tr>";
+    }
+
+    echo "</table>";
+}
+
 }
 ?>

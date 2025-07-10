@@ -106,9 +106,12 @@
 
         }
 
-        $data = new FormData($fn, $ln, $email, $pass);
-        $data ->dataStore();
-        echo "File Submit Successfully";
+        // $data = new FormData($fn, $ln, $email, $pass);
+        // $data ->dataStore();
+        // echo "File Submit Successfully";
+
+         // Display stored data
+        FormData::display();
 
 
         ?>
