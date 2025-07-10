@@ -11,11 +11,13 @@ class FormData
         $this->batch = $batch;
     }
 
-    public function output() // child class of output ()
+    public function output() // child class of dataStore ()
     {
         // Tab-delimited format
 
         return $this->id . "\t" . $this->name . "\t" . $this->batch . PHP_EOL;
+
+        //PHP_EOL = সার্ভারের জন্য উপযুক্ত "নতুন লাইন" চিহ্ন।
     }
 
     public function dataStore()  // parent class
@@ -31,11 +33,11 @@ class FormData
       
           //The file() reads a file into an array.
 		
-		echo "<b>ID | Name | COURSE | PHONE</b><br/>";
+		echo "<b>ID | Name | Batch </b><br/>";
 		foreach($students as $student){
 				   list($id,$name,$batch)=explode("\t",$student);
-				   echo "$id | $name | $batch |<br/>";			   
-	    }			
+				   echo "$id | $name | $batch |<br/>";	   
+	    }
 		
    }   
 
