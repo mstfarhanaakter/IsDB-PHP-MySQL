@@ -85,6 +85,7 @@ if(isset($_POST["login"])){
         }
     }
     $msg = "Email or Password is incorrect!";
+    echo $msg;
 }
 ?>
 </body>
