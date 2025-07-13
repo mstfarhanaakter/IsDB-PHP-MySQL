@@ -82,14 +82,29 @@
 </body>
 
 <?php
-session_start();  // Start the session at the very beginning
+session_start();
 
-if (isset($_POST["login"])) {
-    $email = trim($_POST["email"]);
-    $password = trim($_POST["pass"]);
-    $file = file("auth.txt", FILE_IGNORE_NEW_LINES);
-    
+if (isset($_POST["submit"])) {
+    $username = trim($_POST["user"]);
+    $password = $_POST["pass"];
 
-    
+    $users = file("auth.txt", FILE_IGNORE_NEW_LINES);
+    $login_success = false;
+
+    foreach ($users as $user) {
+        $parts = explode("|", $user);
+        if (count($parts) < 2) continue;
+
+        $stored_user = trim($parts[0]);
+        $stored_password = trim($parts[1]);
+
+        if ($username === $stored_user && password_verify($password, $stored_password)) {
+            $_SESSION["username"] = $stored_user;
+            header("Location: main.php");
+            exit;
+        }
+    }
+
+    $msg = "Invalid username or password!";
 }
 ?>

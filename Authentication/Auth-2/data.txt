@@ -1,4 +1,0 @@
-admin,$2y$10$Nv/UN.hgSuj08hSYFum3me4OJiBUHTWPiH5T7R.mkT3vX71M0cL.q
-admin,$2y$10$LjMKrq06pwndTwlgpMZgcu7QI4U7U8MQkurRPqDy8.wSWE/Bt2kWK
-admin,$2y$10$d4cOBof5wM8pANEtfijBeuMxq6uSGSDCI.JCpoICtGCDdB4.Kz7s2
-admin,$2y$10$sQhPY7zdZNCf4qL7eKY8M.tn4pRQIVtbZrM9LhbZLWpBh2suMJd06
