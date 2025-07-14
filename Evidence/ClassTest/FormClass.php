@@ -14,7 +14,7 @@ class FormData
     public function output() // child class of output ()
     {
         // Tab-delimited format
-        return $this->email . "\t" . $this->contact . "\t" . $this->password . PHP_EOL;
+        return $this->email . "|" . $this->contact . "|" . $this->password . PHP_EOL;
     }
 
     public function dataStore()  // parent class
@@ -41,7 +41,7 @@ class FormData
 
 
             foreach ($records as $record) {
-            $data = explode("\t", trim($record));
+            $data = explode("|", trim($record));
             echo "<tr>";
             foreach ($data as $value) {
                 echo "<td style='border:1px solid black;'>" . htmlspecialchars($value) . "</td>";
