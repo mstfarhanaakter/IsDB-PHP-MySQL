@@ -1,0 +1,3 @@
+Username | Password | Email
+
+Farhana|$2y$10$lXp6ychJQB6Wd.SlH8jtDebdQLO76l9ND23z/Hlaxvh2ZZLhOkE4q|farhanaa@gmail.com
