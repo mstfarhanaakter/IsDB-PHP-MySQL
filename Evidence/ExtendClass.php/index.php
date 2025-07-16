@@ -89,7 +89,7 @@
     require_once 'ExtendClass.php';
 
     use ParentClass\ExtendClass;  // আমরা App নেমস্পেস থেকে ExtendClass কে আনছি।
-
+    
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $id = $_POST['id'];
@@ -104,7 +104,7 @@
         $file_size = $_FILES['upload']['size'];
         $file_extension = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
 
-         $uploadDir = 'media/'; 
+        $uploadDir = 'media/';
 
 
         //only allow extension
@@ -112,34 +112,26 @@
         $max_size_kb = 400;
 
         //file size constrain
-        $kb = $file_size/1024;
-          if (!in_array($file_extension, $allow_ext)){
-         echo "<p style='color:red;text-align:center;'>Only JPG, JPEG, PNG files are allowed.</p>";
-    } elseif ($file_size / 1024 > $max_size_kb) {
-        echo "<p style='color:red;text-align:center;'>File is too large. Max size is 400KB.</p>";
-    } else {
-        }
-        
-
-      
-
-       
-        
-
-       
-
-        // type 
-
-        // $file_type = $_FILES['upload']['type'];
-
-
-        if (!is_dir($uploadDir)) {
-            mkdir($uploadDir); // create if this file not exists
-        }
-
-        // move_uploaded_file($temp_name, $uploadDir . $file_name);
-        // echo "<img src='media/$file_name' width='150'>";
     
+        if (!in_array($file_extension, $allow_ext)) {
+            echo "<p style='color:red;text-align:center;'>Only JPG, JPEG, PNG files are allowed.</p>";
+        } elseif ($file_size / 1024 > $max_size_kb) {
+            echo "<p style='color:red;text-align:center;'>File is too large. Max size is 400KB.</p>";
+        } else {
+            // Create upload directory if not exists
+    
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir);
+            }
+
+            if (move_uploaded_file($temp_name, $uploadDir . $file_name)) {
+                echo "<p style='color:green;text-align:center;'>File uploaded successfully!</p>";
+            } else {
+                echo "<p style='color:red;text-align:center;'>Failed to upload the file.</p>";
+            }
+        }
+
+
 
 
         // Email and phone validation
@@ -152,7 +144,7 @@
     
             $data = new ExtendClass($name, $id, $email, $phone, $address, $file_name);
             $data->store(); // Save to data.txt
-
+    
             echo "<p style='text-align:center;color:green;'>Data submitted successfully!</p>";
         } else {
             echo "<h4 style='color:red'>Your Email and/or Phone number are invalid</h4>";

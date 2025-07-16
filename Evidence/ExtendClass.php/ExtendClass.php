@@ -1,7 +1,7 @@
 <?php
-    namespace ParentClass;
-    
-    use ParentClass\StudentInfo;
+namespace ParentClass;
+
+use ParentClass\StudentInfo;
 
 class ExtendClass extends StudentInfo
 {
