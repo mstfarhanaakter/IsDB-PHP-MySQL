@@ -26,7 +26,7 @@
             <a class="nav-link" href="FormReg/index.php">Form Registraion</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">File Upload</a>
+            <a class="nav-link" href="../index.php">File Upload</a>
           </li>
         </ul>
         <!-- Left links -->

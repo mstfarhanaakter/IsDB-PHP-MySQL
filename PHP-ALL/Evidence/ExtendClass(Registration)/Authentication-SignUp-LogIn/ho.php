@@ -5,8 +5,20 @@
     exit;
   }
 ?> -->
+
+
 <?php
-// header and navbar
+// header 
 require_once "Files/phpheader.php";
+require_once "Files/navbar.php";
+
 echo "<br>";
 ?>
+
+    
+
+
+
+
+
+<?php require_once"Files/footer.php"; ?>
