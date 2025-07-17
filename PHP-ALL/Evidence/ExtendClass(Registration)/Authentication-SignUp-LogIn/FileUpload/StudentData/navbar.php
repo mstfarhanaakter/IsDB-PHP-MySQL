@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-weight:bold;">
         <!-- Navbar brand -->
         <a class="navbar-brand mt-2 mt-lg-0" href="#">
-          <img src="Files/spider-web (1).png" height="40" class="ms-4" />
+          <img src="spider-web (1).png" height="40" class="ms-4" />
         </a>
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -23,7 +23,7 @@
             <a class="nav-link" href="#">Team</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="FormReg/index.php">Form Registraion</a>
+            <a class="nav-link" href="index.php">Form Registraion</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">File Upload</a>
@@ -38,7 +38,7 @@
         <div class="dropdown">
           <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
             id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
-            <img src="Files\user.png" class="rounded-circle" height="25" />
+            <img src="user.png" class="rounded-circle" height="25" />
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
             <li>
@@ -48,7 +48,7 @@
               <a class="dropdown-item" href="#">Settings</a>
             </li> -->
             <li>
-              <a class="dropdown-item" href="logout.php">Logout</a>
+              <a class="dropdown-item" href="../../logout.php">Logout</a>
             </li>
           </ul>
         </div>

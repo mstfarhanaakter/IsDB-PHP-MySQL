@@ -19,6 +19,6 @@ session_destroy();
 </html> -->
 
 <?php 
-    header("Location: login.php");
+    header("Location:login.php");
     exit;
 ?>

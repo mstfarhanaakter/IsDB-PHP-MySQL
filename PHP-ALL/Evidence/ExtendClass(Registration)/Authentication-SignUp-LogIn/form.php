@@ -11,8 +11,10 @@
 <a href="logout.php">Logout</a> -->
 
 <?php
-// header and navbar
+// header 
 require_once "Files/phpheader.php";
+require_once "Files/css.php";
+require_once "Files/navbar.php";
 echo "<br>";
 ?>
 
