@@ -15,7 +15,7 @@
 
 /* Style your form container */
 .form {
-  background-color: #aec3b0;
+  background-color: #d5d3fdff;
   padding: 20px 30px;
   border-radius: 50px 5px 50px 5px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -26,7 +26,7 @@
 
 /* Style your student info container */
 .student-info-container {
-  background-color: #d5e1d1;
+  background-color: #ebd6ffff;
   border-radius: 15px;
   /* padding: 20px; */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);

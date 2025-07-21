@@ -1,3 +1,2 @@
 Username | Password | Email
 
-Farhana|$2y$10$jVcojOimExmSV0PJN8/45ezGVGlGef1h53ouZ.31BW7W0VEXcZf5W|farhanaa@gmail.com
