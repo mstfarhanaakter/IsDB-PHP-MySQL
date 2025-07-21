@@ -1,3 +1,4 @@
+<div class="flex-container">
 <div class="form">
         <form action="" method="post" enctype="multipart/form-data">
             <legend><b>Student Personal Information</b></legend>
@@ -22,5 +23,8 @@
             <br>
             <button name="submit">Submit</button>
         </form>
+    </div>
+    <!-- <div class="student-info-container">
+    </div> -->
     </div>
     

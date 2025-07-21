@@ -17,17 +17,17 @@
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="ho.php">Home</a>
+            <a class="nav-link" href="h.php">Home</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="#">Team</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="FormReg/index.php">Form Registraion</a>
+            <a class="nav-link" href="form.php">Form Registraion</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="">File Upload</a>
-          </li>
+          </li> -->
         </ul>
         <!-- Left links -->
       </div>

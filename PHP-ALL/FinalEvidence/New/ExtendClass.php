@@ -29,11 +29,11 @@ class ExtendClass extends StudentInfo
 
         $studentFile = file(self::$file_path, FILE_APPEND);
 
-        echo "<h2 style='text-align:center; text-decoration:underline'>Student Information</h2>";
-        echo "<table border='1' cellpadding='10' style='border-collapse:collapse; margin:30px auto; width:50%; background-color: #aec3b0; text-align:center'>";
+        echo "<h2 style='text-align:center; font-family:cursive; text-decoration:underline'>Student Information</h2>";
+        echo "<table border='1' cellpadding='10' style='border-collapse:collapse; margin:30px auto; text-align:center'>";
         echo "<tr>
                 <th>Name</th>
-                <th>Id</th>
+                <th>ID</th>
                 <th>Email</th>
                 <th>Contact No</th>
                 <th>Address</th>
@@ -50,7 +50,7 @@ class ExtendClass extends StudentInfo
                     <td>" . htmlspecialchars($email) . "</td>
                     <td>" . htmlspecialchars($phone) . "</td>
                     <td>" . htmlspecialchars($address) . "</td>
-                    <td><img src='media/" . htmlspecialchars($photo) . "' width='100'\"></td>
+                    <td><img src='media/" . htmlspecialchars($photo) . "' width='50'\"></td>
                   </tr>";
         }
 
