@@ -2,17 +2,17 @@
   .form {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   form {
     background-color: #aec3b0;
     padding: 20px;
     border-radius: 50px 5px 50px 5px;
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
   }
 
   input {
@@ -46,4 +46,7 @@
     cursor: pointer;
 
   }
+  /* .container{
+    display: block;
+  } */
 </style>

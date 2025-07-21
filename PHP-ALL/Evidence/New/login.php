@@ -100,7 +100,7 @@ if (isset($_POST["submit"])) {
 
         if ($username === $stored_user && password_verify($password, $stored_password)) {
             $_SESSION["username"] = $stored_user;
-            header("Location:FileUpload/StudentData/index.php");
+            header("Location:h.php");
             exit;
         }
     }
