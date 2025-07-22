@@ -18,7 +18,7 @@ $database = mysqli_connect("localhost","root","","college" );
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Name</th>
-      <th scope="col">Email</th>
+      <th scope="col">Email</th
       <th scope="col">Contact</th>
       <!-- <th scope="col">Color</th> -->
     </tr>
