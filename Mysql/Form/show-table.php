@@ -16,7 +16,6 @@
 <body>
     <table>
         <tr>
-            <td>ID</td>
             <td>Name</td>
             <td>Email</td>
             <td>Phone</td>
@@ -26,9 +25,8 @@
 
         <?php 
         $data = $sql_connect->query("SELECT * FROM `users information`");
-        while(list($id, $name, $email, $phone, $address, $higher_education)= $data ->fetch_row()){
+        while(list($name, $email, $phone, $address, $higher_education)= $data ->fetch_row()){
             echo "<tr>
-            <td>$id</td>
             <td>$name</td>
             <td>$email</td>
             <td>$phone</td>

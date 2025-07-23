@@ -2,21 +2,20 @@
     $sql_connect = mysqli_connect("localhost", "root", "", "info");
 
     if (isset($_POST["submit"])) {
-        $id = $_POST["id"];
         $name = $_POST["name"];
         $email = $_POST["email"];
         $phone = $_POST["phone"];
         $address = $_POST["add"];
         $higher_education = $_POST["he"];
+        $query = $sql_connect->query("call call_info('$name', '$email', '$phone', '$address', '$higher_education')");
 
-        $sql = "INSERT INTO `users information` (id, name, email, phone, address, `highest education`) VALUES ('$id', '$name', '$email', '$phone', '$address', '$higher_education')";
-
-        if (mysqli_query($sql_connect, $sql) == TRUE) {
-            echo "DATA IN";
-            header('Location: show-table.php');
-        } else {
-            echo "Data Not Inserted";
-        }
+        // $sql = "INSERT INTO `users information` (name, email, phone, address, `highest education`) VALUES ('$name', '$email', '$phone', '$address', '$higher_education')";
+        if ($query) {
+             
+             header('Location: show-table.php');
+         } else {
+             echo "Data Not Inserted";
+         }
     }
 ?>
 
@@ -40,11 +39,11 @@
     }
 </style>
 <body>
-    <form action=""method="post">
-        <label for="">ID</label>
+    <form action="#" method="POST">
+        <!-- <label for="">ID</label>
         <input type="number" name="id">
         <br>
-        <br>
+        <br> -->
         <label for="">Name</label>
         <input type="text" name="name">
         <br>
