@@ -1,6 +1,7 @@
 <?php 
     $sql_connect = mysqli_connect("localhost", "root", "", "info");
 ?>
+
 <style>
     table{
         margin: 30px auto;
@@ -32,7 +33,6 @@
             <td>$phone</td>
             <td>$address</td>
             <td>$higher_education</td>
-            
             </tr>";
         }
         ?>
