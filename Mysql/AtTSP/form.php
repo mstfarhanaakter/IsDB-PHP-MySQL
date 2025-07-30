@@ -1,3 +1,33 @@
+<?php
+$db = new mysqli('localhost', 'root', '', 'data');
+
+// Add Manufacturer
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $address = $_POST['add'];
+    $contact = $_POST['contact'];
+    $db->query("CALL add_manufacture('$name','$address','$contact')");
+}
+
+// Add Product
+if (isset($_POST['insert'])) {
+    $pname = $_POST['pname'];
+    $price = $_POST['pprice'];
+    $manu = $_POST['mid'];
+    $db->query("CALL add_product('$pname', $price, $manu)");
+}
+
+// Delete Manufacturer
+if (isset($_POST['delcategory'])) {
+    $mid = $_POST['mid'];
+    $db->query("DELETE FROM manufacturer WHERE id = $mid");
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,7 +171,12 @@
         <div class="form-field">
           <label class="label" for="manufacturer_select">Manufacturer ID</label>
           <select id="manufacturer_select" class="input-text js-input" name="mid" required>
-            <option value=""></option>
+           <?php 
+                            $manufac = $db->query("SELECT * FROM manufacturer");
+                            while(list($_mid,$_name) = $manufac->fetch_row()){
+                                echo "<option value='$_mid'>$_name</option>"; 
+                            }
+                        ?>
           </select>
         </div>
         <div class="form-field">
@@ -156,8 +191,13 @@
       <form method="post" class="contact-form">
         <div class="form-field">
           <label for="category_select" class="label">Category</label>
-          <select name="category" id="category_select" class="input-text js-input" required>
-            <option value="1"></option>
+          <select name="mid"  id="category_select" class="input-text js-input" required>
+             <?php 
+                            $manufac = $db->query("SELECT * FROM manufacturer");
+                            while(list($_mid,$_name) = $manufac->fetch_row()){
+                                echo "<option value='$_mid'>$_name</option>";
+                            }
+                        ?>
           </select>
         </div>
         <div class="form-field">
@@ -166,6 +206,46 @@
       </form>
     </section>
   </div>
+
+<!--  -->
+
+<!-- Product Table -->
+<?php 
+$sql ="SELECT * FROM view_product";
+$result =mysqli_query($db,$sql); 
+
+if ($result->num_rows > 0) {
+    echo "<table border='1' width='80%' align='center'>
+            <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Manufacturer</th>
+            </tr>";
+    while(list($pid, $pname, $price, $name) = $result->fetch_row()){
+        echo "<tr>
+                <td align='center'>$pid</td>
+                <td>$pname</td>
+                <td>$price</td>
+                <td>$name</td>
+              </tr>";
+    }
+    echo "</table>";
+} else {
+    echo "<p style='text-align:center;'>No products found.</p>";
+}
+?>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
 
   <!-- Bootstrap JS (Optional, for interactive components like dropdowns, modals) -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb7dYxHUiVf9JSK7w4r14hXl8cA0jfuWr6T16Tw3BOP0XW5t7" crossorigin="anonymous"></script>
