@@ -168,7 +168,7 @@ if (isset($_POST['delman'])) {
 
                 <!-- Table 1: All products -->
                 <div class="table-container" style="flex: 1; min-width: 300px;">
-                    <h4 class="text-center mb-4">Product List with Manufacturer</h4>
+                    <h4 class="text-center mb-4">Product and Manufacturer Information</h4>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover align-middle">
                             <thead class="table-success text-center">
