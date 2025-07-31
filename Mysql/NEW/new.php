@@ -54,7 +54,7 @@ if (isset($_POST['delman'])) {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Combined Forms</title>
+    <title>Manufacture and Product</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -201,7 +201,7 @@ if (isset($_POST['delman'])) {
 
                 <!-- Table 2: Products with price > 5000 -->
                 <div class="table-container" style="flex: 1; min-width: 300px;">
-                    <h4 class="text-center mb-4">Product List &gt; 5000</h4>
+                    <h4 class="text-center mb-4">Product List More Than 5000</h4>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover align-middle">
                             <thead class="table-success text-center">
