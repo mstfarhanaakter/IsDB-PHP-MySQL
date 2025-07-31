@@ -39,11 +39,6 @@ if (isset($_POST['delman'])) {
     }
 }
 
-// Refresh manufacturer list after any operation to keep it updated
-    $manufacturer = $connection->query("SELECT * FROM manufacturer");
-
-// Fetch manufacturers for dropdowns
-    $manufacturer_result = $connection->query("SELECT * FROM manufacturer");
 
 // Fetch all products for first table
     $sql_all = "SELECT * FROM product_view";  
